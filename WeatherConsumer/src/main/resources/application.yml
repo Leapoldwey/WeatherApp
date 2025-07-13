@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weather_consumer
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  kafka:
+    bootstrap-servers: localhost:9092,localhost:9094
+    consumer:
+      group-id: weather-group
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      error-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring.json.trusted.packages: 'org.example.event'
+
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  liquibase:
+    enabled: true
+    change-log: db/changelog/main-changelog.xml
+
+weather-topic: weather-topic

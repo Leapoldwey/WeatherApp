@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/WeatherConsumer/src/main/java/org/example/weatherconsumer/repository/WeatherRepository.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/WeatherConsumer/src/main/resources/db/changelog/city/v1/weather-v1-changeset.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/WeatherProducer/src/main/resources/db/changelog/city/v1/city-v1-changeset.sql" dialect="PostgreSQL" />
+  </component>
+</project>
