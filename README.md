@@ -22,6 +22,7 @@
  - Spring Data Jpa
  - Apache Kafka
  - PostgreSQL
+ - Liquibase
  - Docker Compose
  - Redis
  - MapStruct
